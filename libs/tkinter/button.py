@@ -1,12 +1,16 @@
 __author__ = 'chandrasekar.g'
 
 import tkinter as tk
+import webbrowser as web
 
 class Application(tk.Frame):
     def __init__(self, master):
         tk.Frame.__init__(self, master=None)
         self.pack()
         self.definingButton()
+
+    def openURL(self):
+            web.open("http://google.com")
 
     def definingButton(self):
 
@@ -36,7 +40,9 @@ class Application(tk.Frame):
 
         self.geometryButton               =    tk.Button(self, text='geometry Button')
 
+        self.openInBrowser                =     tk.Button(self, text="Open in browser")
 
+        self.openInBrowser['command']     =     self.openURL
 
 
 
@@ -95,9 +101,6 @@ class Application(tk.Frame):
 
 
 
-
-
-
         self.cursorButton.pack(side='top')
         self.fontFaceButton.pack(side='top')
         self.fontSizeButton.pack(side='top')
@@ -112,6 +115,13 @@ class Application(tk.Frame):
         self.justifyTextLeftBtn.pack(side='left')
         self.justifyTextCenterBtn.pack(side='left')
         self.justifyTextRightBtn.pack(side='left')
+
+
+        self.openInBrowser.pack(side='bottom')
+
+
+
+
 
 
 
