@@ -1,0 +1,12 @@
+
+*.xml
+
+*.json
+
+.idea/Python.iml
+
+Google/gmail.py
+
+.idea/.name
+
+libs/kivvy/test.pyc
